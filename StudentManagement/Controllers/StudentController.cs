@@ -1,4 +1,5 @@
 ﻿using StudentManagement.Models;
+using StudentManagement.Models.EF;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,23 +10,35 @@ namespace StudentManagement.Controllers
 {
     public class StudentController : Controller
     {
-        // GET: Student
+        StudentContext context; 
+        public StudentController()
+        {
+            context = new StudentContext();
+        }
         public ActionResult Index()
         {
-            var studentList = new List<Student>{
-                            new Student() { StudentId = 1, StudentName = "John", Age = 18 } ,
-                            new Student() { StudentId = 2, StudentName = "Steve",  Age = 21 } ,
-                            new Student() { StudentId = 3, StudentName = "Bill",  Age = 25 } ,
-                            new Student() { StudentId = 4, StudentName = "Ram" , Age = 20 } ,
-                            new Student() { StudentId = 5, StudentName = "Ron" , Age = 31 } ,
-                            new Student() { StudentId = 4, StudentName = "Chris" , Age = 17 } ,
-                            new Student() { StudentId = 4, StudentName = "Rob" , Age = 19 }
-                        };
-            // Get the students from the database in the real application
-
+            var studentList = context.Students.ToList();
             return View(studentList);
         }
 
+        public ActionResult Edit(int id)
+        {
+            var student = context.Students.Where(s => s.StudentId == id)
+                                 .FirstOrDefault();
+            return View(student);
+        }
 
+
+
+        [HttpPost]
+        public ActionResult Edit(Student student)
+        {
+            if (ModelState.IsValid)
+            {
+                //write code to update student 
+                return RedirectToAction("Index");
+            }
+            return View(student);
+        }
     }
 }
