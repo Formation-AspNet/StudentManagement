@@ -151,8 +151,9 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ArithmeticOperationController.cs" />
+    <Compile Include="Controllers\GroupsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -163,6 +164,10 @@
     <Compile Include="Migrations\201802221355578_Student_Valisation.cs" />
     <Compile Include="Migrations\201802221355578_Student_Valisation.Designer.cs">
       <DependentUpon>201802221355578_Student_Valisation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802221439269_AddGroupNameColumns.cs" />
+    <Compile Include="Migrations\201802221439269_AddGroupNameColumns.Designer.cs">
+      <DependentUpon>201802221439269_AddGroupNameColumns.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\EF\StudentContext.cs" />
@@ -207,10 +212,18 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Student\index.cshtml" />
     <Content Include="Views\ArithmeticOperation\Addition.cshtml" />
     <Content Include="Views\ArithmeticOperation\index.cshtml" />
-    <Content Include="Views\Student\Edit.cshtml" />
+    <Content Include="Views\Students\Create.cshtml" />
+    <Content Include="Views\Students\Delete.cshtml" />
+    <Content Include="Views\Students\Details.cshtml" />
+    <Content Include="Views\Students\Edit.cshtml" />
+    <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\Groups\Create.cshtml" />
+    <Content Include="Views\Groups\Delete.cshtml" />
+    <Content Include="Views\Groups\Details.cshtml" />
+    <Content Include="Views\Groups\Edit.cshtml" />
+    <Content Include="Views\Groups\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -234,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802221355578_Student_Valisation.resx">
       <DependentUpon>201802221355578_Student_Valisation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802221439269_AddGroupNameColumns.resx">
+      <DependentUpon>201802221439269_AddGroupNameColumns.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
