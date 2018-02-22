@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StudentManagement.Models.EF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,17 @@ namespace StudentManagement.Controllers
 {
     public class StudentController : Controller
     {
-        // GET: Student
         public string Index()
         {
-            return "This is Index action method of StudentController";
+            return "Bonjour Controller";
+        }
+
+        public string number_students()
+        {
+            StudentContext context = new StudentContext();
+            int number_of_students = context.Students.Count();
+            return string.Format("Nombre des étudiants {0}", number_of_students);
         }
     }
 }
+
