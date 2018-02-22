@@ -8,12 +8,22 @@ namespace StudentManagement.Controllers
 {
     public class StudentController : Controller
     {
-        // GET: Student
         public ActionResult Index()
         {
+            ViewBag.message = "il y a 30 stagiaires à la base de données";
             return View();
         }
 
-       
+        public ActionResult Addition(float? x = null,float? y = null)
+        {
+            if(x != null && y != null)
+            {
+                ViewBag.x = x;
+                ViewBag.y = y;
+                ViewBag.result_addition = x + y;
+
+            }
+            return View();
+        }
     }
 }

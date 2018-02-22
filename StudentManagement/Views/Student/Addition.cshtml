@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Addition";
+}
+<h2>Addition</h2>
+<form action="/Student/addition" method="get">
+    <div>
+        <label>X</label>
+        <input type="text" name="x" value="@ViewBag.x" />
+    </div>
+    <div>
+        <label>T</label>
+        <input type="text" name="y" value="@ViewBag.y" />
+    </div>
+
+    <div>
+        <label>Résultat</label>
+        <input type="text" name="result_addition" value="@ViewBag.result_addition" />
+    </div>
+
+    <div>
+        <input type="submit" value="Addition" />
+    </div>
+</form>
+
