@@ -10,7 +10,12 @@ namespace StudentManagement.Controllers
     {
         public ActionResult Index()
         {
+            // Solution 1
+            //ViewData["message"] = "il y a 30 stagiaires à la base de données";
+
+            // Solution 2
             ViewBag.message = "il y a 30 stagiaires à la base de données";
+           
             return View();
         }
 
