@@ -19,6 +19,13 @@ namespace StudentManagement
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
+            // exemple du routage
+            // routes.MapRoute(
+            //    name: "Default",
+            //    url: "/fr/{controller}/{action}/{id}",
+            //    defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            //);
+
 
         }
     }

@@ -14,7 +14,6 @@ namespace StudentManagement.Controllers
             dynamic i = "";
             i.message = "";
 
-
             // Solution 1
             // ViewData["message"] = "il y a 30 stagiaires à la base de données";
 
