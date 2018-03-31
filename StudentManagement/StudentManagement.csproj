@@ -154,6 +154,8 @@
     <Compile Include="Controllers\GroupsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StudentsController.cs" />
+    <Compile Include="Controllers\Students_1Controller.cs" />
+    <Compile Include="Controllers\TeamsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -169,10 +171,15 @@
     <Compile Include="Migrations\201802221439269_AddGroupNameColumns.Designer.cs">
       <DependentUpon>201802221439269_AddGroupNameColumns.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803291720175_AddTram.cs" />
+    <Compile Include="Migrations\201803291720175_AddTram.Designer.cs">
+      <DependentUpon>201803291720175_AddTram.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\EF\StudentContext.cs" />
     <Compile Include="Models\Group.cs" />
     <Compile Include="Models\Student.cs" />
+    <Compile Include="Models\Team.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -224,6 +231,17 @@
     <Content Include="Views\Groups\Details.cshtml" />
     <Content Include="Views\Groups\Edit.cshtml" />
     <Content Include="Views\Groups\Index.cshtml" />
+    <Content Include="Views\Teams\Create.cshtml" />
+    <Content Include="Views\Teams\Delete.cshtml" />
+    <Content Include="Views\Teams\Details.cshtml" />
+    <Content Include="Views\Teams\Edit.cshtml" />
+    <Content Include="Views\Teams\Index.cshtml" />
+    <Content Include="Views\Students_1\Create.cshtml" />
+    <Content Include="Views\Students_1\Delete.cshtml" />
+    <Content Include="Views\Students_1\Details.cshtml" />
+    <Content Include="Views\Students_1\Edit.cshtml" />
+    <Content Include="Views\Students_1\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout_Solution1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -250,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802221439269_AddGroupNameColumns.resx">
       <DependentUpon>201802221439269_AddGroupNameColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803291720175_AddTram.resx">
+      <DependentUpon>201803291720175_AddTram.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

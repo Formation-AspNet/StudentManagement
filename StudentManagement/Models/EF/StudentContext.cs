@@ -14,6 +14,7 @@
 
         public virtual DbSet<Student> Students { get; set; }
         public virtual DbSet<Group> Groups { get; set; }
+        public virtual DbSet<Team> Teams { get; set; }
     }
 
 
