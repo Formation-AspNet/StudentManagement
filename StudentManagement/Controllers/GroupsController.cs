@@ -43,11 +43,11 @@ namespace StudentManagement.Controllers
         }
 
         // POST: Groups/Create
-        // Afin de déjouer les attaques par sur-validation, activez les propriétés spécifiques que vous voulez lier. Pour 
-        // plus de détails, voir  https://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "GroupId,Name")] Group group)
+        public ActionResult Create([Bind(Include = "GroupId,Name,Description,Description2")] Group group)
         {
             if (ModelState.IsValid)
             {
@@ -75,11 +75,11 @@ namespace StudentManagement.Controllers
         }
 
         // POST: Groups/Edit/5
-        // Afin de déjouer les attaques par sur-validation, activez les propriétés spécifiques que vous voulez lier. Pour 
-        // plus de détails, voir  https://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "GroupId,Name")] Group group)
+        public ActionResult Edit([Bind(Include = "GroupId,Name,Description,Description2")] Group group)
         {
             if (ModelState.IsValid)
             {

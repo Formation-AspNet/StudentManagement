@@ -169,6 +169,14 @@
     <Compile Include="Migrations\201802221439269_AddGroupNameColumns.Designer.cs">
       <DependentUpon>201802221439269_AddGroupNameColumns.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809042213297_Add-Description-To-Group.cs" />
+    <Compile Include="Migrations\201809042213297_Add-Description-To-Group.Designer.cs">
+      <DependentUpon>201809042213297_Add-Description-To-Group.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809042237257_Add-Description2.cs" />
+    <Compile Include="Migrations\201809042237257_Add-Description2.Designer.cs">
+      <DependentUpon>201809042237257_Add-Description2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\EF\StudentContext.cs" />
     <Compile Include="Models\Group.cs" />
@@ -187,6 +195,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Properties\PublishProfiles\students.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -250,6 +259,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802221439269_AddGroupNameColumns.resx">
       <DependentUpon>201802221439269_AddGroupNameColumns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809042213297_Add-Description-To-Group.resx">
+      <DependentUpon>201809042213297_Add-Description-To-Group.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809042237257_Add-Description2.resx">
+      <DependentUpon>201809042237257_Add-Description2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

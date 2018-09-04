@@ -1,5 +1,7 @@
-﻿using System;
+﻿using StudentManagement.Models.EF;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -16,6 +18,12 @@ namespace StudentManagement
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<StudentContext, StudentManagement.Migrations.Configuration>());
+            StudentContext StudentContext = new StudentContext();
+            StudentContext.Database.Initialize(true);
+
+
         }
     }
 }
