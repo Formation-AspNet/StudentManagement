@@ -102,6 +102,18 @@ namespace StudentManagement.Controllers
                 return HttpNotFound();
             }
             ViewBag.GroupId = new SelectList(db.Groups, "GroupId", "GroupId", student.GroupId);
+
+
+            
+
+            ViewBag.Teams = new SelectList(db.Teams, "TeamId", "TeamName");
+
+            List<SelectListItem> selected = new List<SelectListItem>();
+            selected.Add(new SelectListItem() { })
+        
+
+            ViewBag.SelectedTeam = student.Teams.Select(t => new SelectListItem() { Value = t.TeamId.ToString(), Text = t.TeamName, Selected = true  });
+         
             return View(student);
         }
 
